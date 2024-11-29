@@ -6,65 +6,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FUT FC25</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body class="bg-gray-800 text-white">
-    <div class="container mx-auto max-w-6xl py-8 grid grid-cols-10 gap-8">
+    <div class="container mx-auto max-w-7xl py-8 grid grid-cols-10 gap-4">
         <div class="col-span-6">
             <h1 id="fut-fc25" class="text-3xl font-bold text-green-800 mb-6">FUT FC25</h1>
 
             <div class="bg-green-600 w-full h-[680px] relative mb-6 rounded-lg shadow-lg">
-                <div id="football-pitch" class="w-full h-full relative"
-                    style="background-image: url('img/stadium_background.webp'); background-size: cover;"></div>
+                <div id="football-pitch" class="w-full h-full relative bg-cover bg-center"
+                    style="background-image: url('img/stadium_background.webp');">
+
+                </div>
             </div>
 
-            <div class="mt-6 bg-gray-700 p-6 rounded-lg shadow-md col-span-6">
-                <h2 class="text-2xl font-bold mb-4 text-green-600">Selected players</h2>
-                <div id="player-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <div class="flex flex-col items-center bg-[url('img/badge_gold.webp')] rounded-2xl overflow-hidden shadow-lg">
-                        <div class=" w-full py-2 flex justify-between items-center">
-                          <div class="flex items-center">
-                            <img src="argentina-flag.png" alt="Argentina Flag" class="h-6 mr-2">
-                            <span class="text-gray-700 font-bold">Messi</span>
-                          </div>
-                          <span class="text-white font-bold px-3 py-1 rounded-full">90 CF</span>
+            <div class="mt-6 p-6 rounded-lg shadow-md col-span-6">
+                <div id="player-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-2">
+                    <div class="relative isolate w-[142px] text-[#4d331f] font-['Cruyff-Regular',Arial,sans-serif] text-[calc(142px*0.0557)] font-normal aspect-[0.71527778]"
+                        style="transform: scale(.9);">
+                        <!-- Background Image -->
+                        <img src="https://cdn3.futbin.com/content/fifa25/img/cards/hd/1_gold.png?fm=png&amp;ixlib=java-2.1.0&amp;verzion=4&amp;w=644&amp;s=f1df4164887bb424daae0cd265488b26"
+                            alt="Card Background"
+                            class="aspect-[252/350] w-full rounded-lg h-full">
+
+                        <!-- Player Base Image -->
+                        <img src="https://cdn3.futbin.com/content/fifa25/img/players/158023.png?fm=png&amp;ixlib=java-2.1.0&amp;verzion=1&amp;w=512&amp;s=a9f7d6154869ddca4f846562dae8b5b6"
+                            alt="Messi" class="absolute h-auto top-[17.4%] left-[22%] w-[64.32687%]">
+
+                        <!-- Rating and Position -->
+                        <div class="flex flex-col absolute top-[22%] left-[15%] text-center">
+                            <div class="font-['Cruyff-Bold',sans-serif] text-[2.1373em] leading-[calc(142px*0.1032)]">
+                                88
+                            </div>
+                            <div class="text-[1em] font-['Cruyff-Medium',sans-serif]">
+                                RW
+                            </div>
                         </div>
-                        <img src="messi.jpg" alt="Messi" class="w-full h-64 object-cover">
-                        <div class=" w-full py-2 flex justify-around">
-                          <div class="flex flex-col items-center">
-                            <span class="text-gray-700 font-bold">80</span>
-                            <span class="text-gray-500 text-sm">PAC</span>
-                          </div>
-                          <div class="flex flex-col items-center">
-                            <span class="text-gray-700 font-bold">87</span>
-                            <span class="text-gray-500 text-sm">SHO</span>
-                          </div>
-                          <div class="flex flex-col items-center">
-                            <span class="text-gray-700 font-bold">90</span>
-                            <span class="text-gray-500 text-sm">PAS</span>
-                          </div>
-                          <div class="flex flex-col items-center">
-                            <span class="text-gray-700 font-bold">94</span>
-                            <span class="text-gray-500 text-sm">DRI</span>
-                          </div>
-                          <div class="flex flex-col items-center">
-                            <span class="text-gray-700 font-bold">33</span>
-                            <span class="text-gray-500 text-sm">DEF</span>
-                          </div>
-                          <div class="flex flex-col items-center">
-                            <span class="text-gray-700 font-bold">64</span>
-                            <span class="text-gray-500 text-sm">PHY</span>
-                          </div>
+
+                        <!-- Name and Stats Wrapper -->
+                        <div
+                            class="absolute w-full flex flex-col items-center justify-evenly left-1/2 -translate-x-1/2 top-[63%] h-[calc(142px*0.33)] max-w-[calc(142px-142px*0.22)]">
+                            <!-- Player Name -->
+                            <div class="text-center max-w-full capitalize tracking-[-0.2px] font-['Cruyff-Medium',sans-serif] text-[1.5em]">
+                                Messi
+                            </div>
+
+                            <!-- Extended Stats -->
+                            <div class="z-[4] flex text-center w-full justify-evenly">
+                                <div class="flex flex-col items-center">
+                                    <div class="font-['Cruyff-Medium',sans-serif]">79</div>
+                                    <div class="uppercase text-[0.77em]">Pac</div>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <div class="font-['Cruyff-Medium',sans-serif]">85</div>
+                                    <div class="uppercase text-[0.77em]">Sho</div>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <div class="font-['Cruyff-Medium',sans-serif]">87</div>
+                                    <div class="uppercase text-[0.77em]">Pas</div>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <div class="font-['Cruyff-Medium',sans-serif]">92</div>
+                                    <div class="uppercase text-[0.77em]">Dri</div>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <div class="font-['Cruyff-Medium',sans-serif]">33</div>
+                                    <div class="uppercase text-[0.77em]">Def</div>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <div class="font-['Cruyff-Medium',sans-serif]">64</div>
+                                    <div class="uppercase text-[0.77em]">Phy</div>
+                                </div>
+                            </div>
+
+                            <!-- Info Row (Nation, League, Club) -->
+                            <div class="translate-y-[-20%] flex gap-2 items-center scale-[0.8]">
+                                <img src="https://cdn3.futbin.com/content/fifa25/img/nation/52.png?fm=png&amp;ixlib=java-2.1.0&amp;w=70&amp;s=b29d36ad91598e91ddb6df42d6ca9e61"
+                                    alt="Argentina" class="w-4 h-4 object-contain">
+                                <img src="https://cdn3.futbin.com/content/fifa25/img/league/light/39.png?fm=png&amp;ixlib=java-2.1.0&amp;verzion=1&amp;w=512&amp;s=5bca65c46ac4e537eef3cba6e97ee7d6"
+                                    alt="MLS" class="w-4 h-4 object-contain">
+                                <img src="https://cdn3.futbin.com/content/fifa25/img/clubs/light/112893.png?fm=png&amp;ixlib=java-2.1.0&amp;verzion=2&amp;w=256&amp;s=703ee6701be96a9d2e6fbd92831b3fa5"
+                                    alt="Inter Miami CF" class="w-4 h-4 object-contain">
+                            </div>
                         </div>
-                        <div class="bg-white w-full py-2 flex justify-center items-center">
-                          <img src="mls-logo.png" alt="MLS Logo" class="h-6 mr-2">
-                          <img src="argentina-badge.png" alt="Argentina Badge" class="h-6">
-                        </div>
-                      </div>
+                    </div>
                 </div>
             </div>
         </div>
-
+<!-- Formation change-->
         <div class="col-span-4">
             <div class="mb-6">
                 <label for="formation-select" class="block font-medium mb-2">Select Formation</label>
@@ -73,11 +103,11 @@
                     <option value="4-3-3">4-3-3</option>
                 </select>
             </div>
-
+<!-- Chemistry score-->
             <div class="mb-6 text-center">
                 <h2 class="text-xl font-semibold text-green-600">Chemistry <span id="chemistry-score">0</span>/100</h2>
             </div>
-
+<!-- Create player form-->
             <div class="bg-gray-700 p-6 rounded-lg shadow-md">
                 <h2 class="text-2xl font-bold mb-4 text-green-600">Add Player</h2>
                 <div>
@@ -216,5 +246,4 @@
     <script src="js/main.js">
     </script>
 </body>
-
 </html>

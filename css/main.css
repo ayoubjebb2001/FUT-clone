@@ -1,0 +1,114 @@
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
+.playercard-field {
+    transform: scale(0.9);
+}
+
+.slot {
+    width: 100%;
+    height: 100%;
+}
+
+/* Position circle styling */   
+
+.position-circle {
+    background: #1a1a1a;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Card button styling */
+.cardbutton {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.button-reset {
+    appearance: none;
+}
+
+/* Placeholder image styling */
+.placeholder-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.placeholder-enable-hover-shadow:hover {
+    filter: brightness(1.1);
+}
+
+/* Plus icon styling */
+.player-add-icon-wrapper-modern {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #00ff77;
+    pointer-events: none;
+}
+
+.display-contents {
+    display: contents;
+}
+
+.font-large {
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #00ff77;
+}
+
+/* Text alignment utilities */
+.text-center {
+    text-align: center;
+}
+/* Only keep styles that can't be handled by Tailwind */
+.player-draggable {
+    width: 100px;
+    cursor: pointer;
+    aspect-ratio: 0.71527778;
+}
+
+.position-circle-wrapper {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -20px;
+    z-index: 10;
+}
+
+.position-circle {
+    @apply bg-gray-900 rounded-full w-8 h-8 flex items-center justify-center text-white text-sm font-bold;
+}
+
+.cardbutton {
+    @apply w-full h-full p-0 border-0 bg-transparent cursor-pointer;
+}
+
+.button-reset {
+    appearance: none;
+}
+
+.player-add-icon-wrapper-modern {
+    @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[#00ff77];
+}
