@@ -542,14 +542,13 @@ function addPlayer() {
 function updatePlayerList() {
     playerList.innerHTML = '';
     players.players.forEach((player) => {
-        // create player card 
         createPlayerCard(player);
     });
 }
 
 function createPlayerCard(playerData) {
     const card = document.createElement('div');
-    card.className = 'relative isolate w-[142px] text-[#4d331f] font-[\'Cruyff-Regular\',Arial,sans-serif] text-[calc(142px*0.0557)] font-normal aspect-[0.71527778]';
+    card.className = 'relative col-span-1 isolate w-[142px] text-[#4d331f] font-[\'Cruyff-Regular\',Arial,sans-serif] text-[calc(142px*0.0557)] font-normal aspect-[0.71527778]';
     card.style.transform = 'scale(.9)';
 
     // Create the HTML structure
@@ -692,4 +691,4 @@ document.addEventListener('DOMContentLoaded', () => {
     updateFormation('4-4-2');
 });
 
-document.addEventListener("DOMContentLoaded", updatePlayerList);
+// document.addEventListener("DOMContentLoaded", updatePlayerList);
