@@ -367,6 +367,7 @@ const players = {
             "nationality": "England",
             "flag": "https://cdn.sofifa.net/flags/gb-eng.png",
             "club": "Liverpool",
+            "logo": "https://cdn.sofifa.net/meta/team/8/30.png",
             "rating": 87,
             "attributes": [
                 { name: "pac", value: 76 },
