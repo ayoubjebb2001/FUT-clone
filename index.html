@@ -23,74 +23,7 @@
 
             <div class="mt-6 p-6 rounded-lg shadow-md col-span-6">
                 <div id="player-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-2">
-                    <div class="relative colspan-1 isolate w-[142px] text-[#4d331f] font-['Cruyff-Regular',Arial,sans-serif] text-[calc(142px*0.0557)] font-normal aspect-[0.71527778]"
-                        style="transform: scale(.9);">
-                        <!-- Background Image -->
-                        <img src="https://cdn3.futbin.com/content/fifa25/img/cards/hd/1_gold.png?fm=png&amp;ixlib=java-2.1.0&amp;verzion=4&amp;w=644&amp;s=f1df4164887bb424daae0cd265488b26"
-                            alt="Card Background"
-                            class="aspect-[252/350] w-full rounded-lg h-full">
-
-                        <!-- Player Base Image -->
-                        <img src="https://cdn3.futbin.com/content/fifa25/img/players/158023.png?fm=png&amp;ixlib=java-2.1.0&amp;verzion=1&amp;w=512&amp;s=a9f7d6154869ddca4f846562dae8b5b6"
-                            alt="Messi" class="absolute h-auto top-[17.4%] left-[22%] w-[64.32687%]">
-
-                        <!-- Rating and Position -->
-                        <div class="flex flex-col absolute top-[22%] left-[15%] text-center">
-                            <div class="font-['Cruyff-Bold',sans-serif] text-[2.1373em] leading-[calc(142px*0.1032)]">
-                                88
-                            </div>
-                            <div class="text-[1em] font-['Cruyff-Medium',sans-serif]">
-                                RW
-                            </div>
-                        </div>
-
-                        <!-- Name and Stats Wrapper -->
-                        <div
-                            class="absolute w-full flex flex-col items-center justify-evenly left-1/2 -translate-x-1/2 top-[63%] h-[calc(142px*0.33)] max-w-[calc(142px-142px*0.22)]">
-                            <!-- Player Name -->
-                            <div class="text-center max-w-full capitalize tracking-[-0.2px] font-['Cruyff-Medium',sans-serif] text-[1.5em]">
-                                Messi
-                            </div>
-
-                            <!-- Extended Stats -->
-                            <div class="z-[4] flex text-center w-full justify-evenly">
-                                <div class="flex flex-col items-center">
-                                    <div class="font-['Cruyff-Medium',sans-serif]">79</div>
-                                    <div class="uppercase text-[0.77em]">Pac</div>
-                                </div>
-                                <div class="flex flex-col items-center">
-                                    <div class="font-['Cruyff-Medium',sans-serif]">85</div>
-                                    <div class="uppercase text-[0.77em]">Sho</div>
-                                </div>
-                                <div class="flex flex-col items-center">
-                                    <div class="font-['Cruyff-Medium',sans-serif]">87</div>
-                                    <div class="uppercase text-[0.77em]">Pas</div>
-                                </div>
-                                <div class="flex flex-col items-center">
-                                    <div class="font-['Cruyff-Medium',sans-serif]">92</div>
-                                    <div class="uppercase text-[0.77em]">Dri</div>
-                                </div>
-                                <div class="flex flex-col items-center">
-                                    <div class="font-['Cruyff-Medium',sans-serif]">33</div>
-                                    <div class="uppercase text-[0.77em]">Def</div>
-                                </div>
-                                <div class="flex flex-col items-center">
-                                    <div class="font-['Cruyff-Medium',sans-serif]">64</div>
-                                    <div class="uppercase text-[0.77em]">Phy</div>
-                                </div>
-                            </div>
-
-                            <!-- Info Row (Nation, League, Club) -->
-                            <div class="translate-y-[-20%] flex gap-2 items-center scale-[0.8]">
-                                <img src="https://cdn3.futbin.com/content/fifa25/img/nation/52.png?fm=png&amp;ixlib=java-2.1.0&amp;w=70&amp;s=b29d36ad91598e91ddb6df42d6ca9e61"
-                                    alt="Argentina" class="w-4 h-4 object-contain">
-                                <img src="https://cdn3.futbin.com/content/fifa25/img/league/light/39.png?fm=png&amp;ixlib=java-2.1.0&amp;verzion=1&amp;w=512&amp;s=5bca65c46ac4e537eef3cba6e97ee7d6"
-                                    alt="MLS" class="w-4 h-4 object-contain">
-                                <img src="https://cdn3.futbin.com/content/fifa25/img/clubs/light/112893.png?fm=png&amp;ixlib=java-2.1.0&amp;verzion=2&amp;w=256&amp;s=703ee6701be96a9d2e6fbd92831b3fa5"
-                                    alt="Inter Miami CF" class="w-4 h-4 object-contain">
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -110,136 +43,160 @@
 <!-- Create player form-->
             <div class="bg-gray-700 p-6 rounded-lg shadow-md">
                 <h2 class="text-2xl font-bold mb-4 text-green-600">Add Player</h2>
-                <div>
-                    <label for="player-name" class="block font-medium mb-2">Player Name</label>
-                    <input type="text" id="player-name" class="bg-gray-600 text-white px-4 py-2 rounded w-full">
-                </div>
-                <div>
-                    <label for="player-position" class="block font-medium mb-2">Position</label>
-                    <select id="player-position" class="bg-gray-600 text-white px-4 py-2 rounded w-full">
-                        <option value="GK">GoalKepper</option>
-                        <option value="CB">Central Back</option>
-                        <option value="LB">Left Back</option>
-                        <option value="RB">Right Back</option>
-                        <option value="CM">Central Midfielder</option>
-                        <option value="LW">Left Wing</option>
-                        <option value="RW">Right Winger</option>
-                        <option value="ST">Striker </option>
-                    </select>
-                </div>
-                <div>
-                    <label for="player-nationality" class="block font-medium mb-2">Nationality</label>
-                    <select id="player-nationality" class="bg-gray-600 text-white px-4 py-2 rounded w-full">
-                        <option value="Morocco" data-flag-url="https://cdn.sofifa.net/flags/ma.png">Morocco</option>
-                        <option value="Italy" data-flag-url="https://cdn.sofifa.net/flags/it.png">Italy</option>
-                        <option value="England" data-flag-url="https://cdn.sofifa.net/flags/gb-eng.png">England</option>
-                        <option value="Portugal" data-flag-url="https://cdn.sofifa.net/flags/pt.png">Portugal</option>
-                        <option value="Canada" data-flag-url="https://cdn.sofifa.net/flags/ca.png">Canada</option>
-                        <option value="Italy" data-flag-url="https://cdn.sofifa.net/flags/fr.png">France</option>
-                        <option value="Norway" data-flag-url="https://cdn.sofifa.net/players/230/621/25_120.png">Norway
-                        </option>
-
-
-                    </select>
-                </div>
-                <div>
-                    <label for="player-club" class="block font-medium mb-2">Club</label>
-                    <select id="player-nationality" class="bg-gray-600 text-white px-4 py-2 rounded w-full">
-                        <option value="PSV" data-logo-url="https://cdn.sofifa.net/meta/team/682/120.png">PSV</option>
-                    </select>
-
-                </div>
-                <div class="flex items-center space-x-6 my-2">
-                    <label for="player-photo" class="block font-medium mb-2">Photo</label>
-                    <div class="shrink-0">
-                        <img class="h-16 w-16 object-cover rounded-full" src="https://cdn.sofifa.net/player_0.svg"
-                            alt="Current profile photo" />
+                <form id="player-form">
+                    <div>
+                        <label for="player-name" class="block font-medium mb-2">Player Name</label>
+                        <input type="text" id="player-name" class="bg-gray-600 text-white px-4 py-2 rounded w-full" required>
                     </div>
-                    <input type="file" name="player-photo" id="player-photo" class=" text-white px-4 py-2 rounded w-full
-                    file:mr-4 file:py-2 file:px-4
-                    file:rounded-full file:border-0
-                    file:text-sm file:font-semibold
-                    file:bg-violet-50 file:text-violet-700
-                    hover:file:bg-violet-100">
-                </div>
-                <div>
-                    <label for="player-rating" class="block font-medium mb-2">General Rating</label>
-                    <input type="number" id="player-rating" class="bg-gray-600 text-white px-4 py-2 rounded w-full"
-                        min="0" max="100">
-                </div>
-                <div id="player-attributes">
-                    <div id="gk-attributes" class="hidden">
-                        <div>
-                            <label for="gk-diving" class="block font-medium mb-2">Diving</label>
-                            <input type="number" id="gk-diving" class="bg-gray-600 text-white px-4 py-2 rounded w-full"
-                                min="0" max="100">
+                    <div>
+                        <label for="player-position" class="block font-medium mb-2">Position</label>
+                        <select id="player-position" class="bg-gray-600 text-white px-4 py-2 rounded w-full" required>
+                            <option value="">Select position</option>
+                            <option value="GK">Goalkeeper</option>
+                            <option value="CB">Central Back</option>
+                            <option value="LB">Left Back</option>
+                            <option value="RB">Right Back</option>
+                            <option value="CDM">Defensive Midfielder</option>
+                            <option value="CM">Central Midfielder</option>
+                            <option value="CAM">Attacking Midfielder</option>
+                            <option value="LW">Left Wing</option>
+                            <option value="RW">Right Wing</option>
+                            <option value="ST">Striker</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="player-nationality" class="block font-medium mb-2">Nationality</label>
+                        <select id="player-nationality" class="bg-gray-600 text-white px-4 py-2 rounded w-full" required>
+                            <option value="">Select nationality</option>
+                            <option value="Morocco" data-flag-url="https://cdn.sofifa.net/flags/ma.png">Morocco</option>
+                            <option value="Argentina" data-flag-url="https://cdn.sofifa.net/flags/ar.png">Argentina</option>
+                            <option value="Portugal" data-flag-url="https://cdn.sofifa.net/flags/pt.png">Portugal</option>
+                            <option value="France" data-flag-url="https://cdn.sofifa.net/flags/fr.png">France</option>
+                            <option value="Brazil" data-flag-url="https://cdn.sofifa.net/flags/br.png">Brazil</option>
+                            <option value="England" data-flag-url="https://cdn.sofifa.net/flags/gb-eng.png">England</option>
+                            <option value="Germany" data-flag-url="https://cdn.sofifa.net/flags/de.png">Germany</option>
+                            <option value="Italy" data-flag-url="https://cdn.sofifa.net/flags/it.png">Italy</option>
+                            <option value="Spain" data-flag-url="https://cdn.sofifa.net/flags/es.png">Spain</option>
+                            <option value="Netherlands" data-flag-url="https://cdn.sofifa.net/flags/nl.png">Netherlands</option>
+                            <option value="Belgium" data-flag-url="https://cdn.sofifa.net/flags/be.png">Belgium</option>
+                            <option value="Croatia" data-flag-url="https://cdn.sofifa.net/flags/hr.png">Croatia</option>
+                            <option value="Norway" data-flag-url="https://cdn.sofifa.net/flags/no.png">Norway</option>
+                            <option value="Egypt" data-flag-url="https://cdn.sofifa.net/flags/eg.png">Egypt</option>
+                            <option value="Canada" data-flag-url="https://cdn.sofifa.net/flags/ca.png">Canada</option>
+                            <option value="Slovenia" data-flag-url="https://cdn.sofifa.net/flags/si.png">Slovenia</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="player-club" class="block font-medium mb-2">Club</label>
+                        <select id="player-club" class="bg-gray-600 text-white px-4 py-2 rounded w-full" required>
+                            <option value="">Select club</option>
+                            <option value="Real Madrid" data-logo-url="https://cdn.sofifa.net/meta/team/3468/120.png">Real Madrid</option>
+                            <option value="Manchester City" data-logo-url="https://cdn.sofifa.net/meta/team/9/120.png">Manchester City</option>
+                            <option value="Liverpool" data-logo-url="https://cdn.sofifa.net/meta/team/8/120.png">Liverpool</option>
+                            <option value="PSG" data-logo-url="https://cdn.sofifa.net/meta/team/591/120.png">Paris Saint-Germain</option>
+                            <option value="Bayern Munich" data-logo-url="https://cdn.sofifa.net/meta/team/503/120.png">Bayern Munich</option>
+                            <option value="Manchester United" data-logo-url="https://cdn.sofifa.net/meta/team/14/120.png">Manchester United</option>
+                            <option value="Inter Miami" data-logo-url="https://cdn.sofifa.net/meta/team/239235/120.png">Inter Miami</option>
+                            <option value="Al Nassr" data-logo-url="https://cdn.sofifa.net/meta/team/2506/120.png">Al Nassr</option>
+                            <option value="Al-Hilal" data-logo-url="https://cdn.sofifa.net/meta/team/7011/120.png">Al-Hilal</option>
+                            <option value="Al-Ittihad" data-logo-url="https://cdn.sofifa.net/meta/team/476/120.png">Al-Ittihad</option>
+                            <option value="Atletico Madrid" data-logo-url="https://cdn.sofifa.net/meta/team/7980/120.png">Atletico Madrid</option>
+                            <option value="PSV" data-logo-url="https://cdn.sofifa.net/meta/team/682/120.png">PSV</option>
+                            <option value="Fenerbahçe" data-logo-url="https://cdn.sofifa.net/meta/team/88/120.png">Fenerbahçe</option>
+                        </select>
+                    </div>
+                    <div class="flex items-center space-x-6 my-2">
+                        <label for="player-photo" class="block font-medium mb-2">Photo</label>
+                        <div class="shrink-0">
+                            <img class="h-16 w-16 object-cover rounded-full" src="https://cdn.sofifa.net/player_0.svg"
+                                alt="Current profile photo" />
                         </div>
-                        <div>
-                            <label for="gk-handling" class="block font-medium mb-2"> Handling</label>
-                            <input type="number" id="gk-handling"
-                                class="bg-gray-600 text-white px-4 py-2 rounded w-full" min="0" max="100">
-                        </div>
-                        <div>
-                            <label for="gk-kicking" class="block font-medium mb-2">Kicking</label>
-                            <input type="number" id="gk-kicking" class="bg-gray-600 text-white px-4 py-2 rounded w-full"
-                                min="0" max="100">
-                        </div>
-                        <div>
-                            <label for="gk-reflexes" class="block font-medium mb-2">Reflexes</label>
-                            <input type="number" id="gk-reflexes"
-                                class="bg-gray-600 text-white px-4 py-2 rounded w-full" min="0" max="100">
-                        </div>
-                        <div>
-                            <label for="gk-speed" class="block font-medium mb-2">Speed</label>
-                            <input type="number" id="gk-speed" class="bg-gray-600 text-white px-4 py-2 rounded w-full"
-                                max="100" min="0">
-                        </div>
-                        <div>
-                            <label for="gk-positionning" class="block font-medium mb-2">Positionning</label>
-                            <input type="number" id="gk-positionning"
-                                class="bg-gray-600 text-white px-4 py-2 rounded w-full" min="0" max="100">
+                        <input type="file" name="player-photo" id="player-photo" class=" text-white px-4 py-2 rounded w-full
+                        file:mr-4 file:py-2 file:px-4
+                        file:rounded-full file:border-0
+                        file:text-sm file:font-semibold
+                        file:bg-violet-50 file:text-violet-700
+                        hover:file:bg-violet-100">
+                    </div>
+                    <div>
+                        <label for="player-rating" class="block font-medium mb-2">General Rating</label>
+                        <input type="number" id="player-rating" class="bg-gray-600 text-white px-4 py-2 rounded w-full"
+                            min="0" max="99" required>
+                    </div>
+                    <div id="player-attributes">
+                        <div id="gk-attributes" class="hidden">
+                            <div>
+                                <label for="gk-diving" class="block font-medium mb-2">Diving</label>
+                                <input type="number" id="gk-diving" class="bg-gray-600 text-white px-4 py-2 rounded w-full"
+                                    min="0" max="100">
+                            </div>
+                            <div>
+                                <label for="gk-handling" class="block font-medium mb-2"> Handling</label>
+                                <input type="number" id="gk-handling"
+                                    class="bg-gray-600 text-white px-4 py-2 rounded w-full" min="0" max="100">
+                            </div>
+                            <div>
+                                <label for="gk-kicking" class="block font-medium mb-2">Kicking</label>
+                                <input type="number" id="gk-kicking" class="bg-gray-600 text-white px-4 py-2 rounded w-full"
+                                    min="0" max="100">
+                            </div>
+                            <div>
+                                <label for="gk-reflexes" class="block font-medium mb-2">Reflexes</label>
+                                <input type="number" id="gk-reflexes"
+                                    class="bg-gray-600 text-white px-4 py-2 rounded w-full" min="0" max="100">
+                            </div>
+                            <div>
+                                <label for="gk-speed" class="block font-medium mb-2">Speed</label>
+                                <input type="number" id="gk-speed" class="bg-gray-600 text-white px-4 py-2 rounded w-full"
+                                    max="100" min="0">
+                            </div>
+                            <div>
+                                <label for="gk-positionning" class="block font-medium mb-2">Positionning</label>
+                                <input type="number" id="gk-positionning"
+                                    class="bg-gray-600 text-white px-4 py-2 rounded w-full" min="0" max="100">
+                            </div>
+
                         </div>
 
+                        <div id="outfield-attributes" class="hidden">
+                            <div>
+                                <label for="player-pace" class="block font-medium mb-2">Pace</label>
+                                <input type="number" id="player-pace"
+                                    class="bg-gray-600 text-white px-4 py-2 rounded w-full" min="0" max="100">
+                            </div>
+                            <div>
+                                <label for="player-shooting" class="block font-medium mb-2"> Shooting</label>
+                                <input type="number" id="player-shooting"
+                                    class="bg-gray-600 text-white px-4 py-2 rounded w-full" min="0" max="100">
+                            </div>
+                            <div>
+                                <label for="player-passing" class="block font-medium mb-2">Passing</label>
+                                <input type="number" id="player-passing"
+                                    class="bg-gray-600 text-white px-4 py-2 rounded w-full" min="0" max="100">
+                            </div>
+                            <div>
+                                <label for="player-dribbling" class="block font-medium mb-2">Dribble</label>
+                                <input type="number" id="player-dribbling"
+                                    class="bg-gray-600 text-white px-4 py-2 rounded w-full" min="0" max="100">
+                            </div>
+                            <div>
+                                <label for="player-defending" class="block font-medium mb-2">Defence</label>
+                                <input type="number" id="player-defending"
+                                    class="bg-gray-600 text-white px-4 py-2 rounded w-full" min="0" max="100">
+                            </div>
+                            <div>
+                                <label for="player-physical" class="block font-medium mb-2">Physical</label>
+                                <input type="number" id="player-physical"
+                                    class="bg-gray-600 text-white px-4 py-2 rounded w-full" min="0" max="100">
+                            </div>
+                        </div>
                     </div>
-
-                    <div id="outfield-attributes" class="hidden">
-                        <div>
-                            <label for="player-pace" class="block font-medium mb-2">Pace</label>
-                            <input type="number" id="player-pace"
-                                class="bg-gray-600 text-white px-4 py-2 rounded w-full" min="0" max="100">
-                        </div>
-                        <div>
-                            <label for="player-shooting" class="block font-medium mb-2"> Shooting</label>
-                            <input type="number" id="player-shooting"
-                                class="bg-gray-600 text-white px-4 py-2 rounded w-full" min="0" max="100">
-                        </div>
-                        <div>
-                            <label for="player-passing" class="block font-medium mb-2">Passing</label>
-                            <input type="number" id="player-passing"
-                                class="bg-gray-600 text-white px-4 py-2 rounded w-full" min="0" max="100">
-                        </div>
-                        <div>
-                            <label for="player-dribbling" class="block font-medium mb-2">Dribble</label>
-                            <input type="number" id="player-dribbling"
-                                class="bg-gray-600 text-white px-4 py-2 rounded w-full" min="0" max="100">
-                        </div>
-                        <div>
-                            <label for="player-defending" class="block font-medium mb-2">Defence</label>
-                            <input type="number" id="player-defending"
-                                class="bg-gray-600 text-white px-4 py-2 rounded w-full" min="0" max="100">
-                        </div>
-                        <div>
-                            <label for="player-physical" class="block font-medium mb-2">Physical</label>
-                            <input type="number" id="player-physical"
-                                class="bg-gray-600 text-white px-4 py-2 rounded w-full" min="0" max="100">
-                        </div>
+                    <div class="mt-4">
+                        <button id="add-player"
+                            class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded w-full">Add
+                            Player</button>
                     </div>
-                </div>
-                <div class="mt-4">
-                    <button id="add-player"
-                        class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded w-full">Add
-                        Player</button>
-                </div>
+                </form>
             </div>
         </div>
     </div>

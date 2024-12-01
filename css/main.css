@@ -84,9 +84,14 @@
 }
 /* Only keep styles that can't be handled by Tailwind */
 .player-draggable {
-    width: 100px;
+    width: 142px;
     cursor: pointer;
     aspect-ratio: 0.71527778;
+    transition: transform 0.2s ease;
+}
+
+.player-draggable:hover {
+    transform: scale(0.95);
 }
 
 .position-circle-wrapper {
@@ -111,4 +116,32 @@
 
 .player-add-icon-wrapper-modern {
     @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[#00ff77];
+}
+
+.selected-slot {
+    outline: 2px solid #00ff77;
+    border-radius: 8px;
+    z-index: 10;
+    animation: pulse 2s infinite;
+}
+
+.selected-player {
+    outline: 2px solid #00ff77;
+    border-radius: 8px;
+    transform: scale(0.95) !important;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 255, 119, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(0, 255, 119, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 255, 119, 0);
+    }
 }
