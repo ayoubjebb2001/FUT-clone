@@ -852,21 +852,7 @@ document.getElementById('player-photo').addEventListener('change', function(e) {
     }
 });
 
-// Initialize the player list when the page loads
-document.addEventListener('DOMContentLoaded', () => {
-    savePlayers();
-    // Load players from localStorage on page load
-    players = JSON.parse(localStorage.getItem('players')) || [];
-    updateFormation('4-4-2');
-    updatePlayerList();
-    // Add form reset listener
-    document.getElementById('player-form').addEventListener('reset', () => {
-        const photoPreview = document.querySelector('.h-16.w-16.object-cover.rounded-full');
-        if (photoPreview) {
-            photoPreview.src = "https://cdn.sofifa.net/player_0.svg";
-        }
-    });
-});
+
 
 let selectedSlot = null;
 let selectedPlayer = null;
@@ -930,3 +916,19 @@ function resetSlot(slot) {
         </div>
     `;
 }
+
+// Initialize the player list when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+    savePlayers();
+    // Load players from localStorage on page load
+    players = JSON.parse(localStorage.getItem('players')) || [];
+    updateFormation('4-4-2');
+    updatePlayerList();
+    // Add form reset listener
+    document.getElementById('player-form').addEventListener('reset', () => {
+        const photoPreview = document.querySelector('.h-16.w-16.object-cover.rounded-full');
+        if (photoPreview) {
+            photoPreview.src = "https://cdn.sofifa.net/player_0.svg";
+        }
+    });
+});
