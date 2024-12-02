@@ -473,32 +473,32 @@ let players = [
 const formations = {
     "4-4-2": {
         positions: [
-            { position: "GK", x: 45, y: 80 },
-            { position: "LB", x: 10, y: 60 },
-            { position: "CB", x: 35, y: 60 },
-            { position: "CB", x: 55, y: 60 },
-            { position: "RB", x: 80, y: 60 },
-            { position: "LM", x: 5, y: 30 },
-            { position: "CM", x: 30, y: 30 },
-            { position: "CM", x: 60, y: 30 },
-            { position: "RM", x: 85, y: 30 },
-            { position: "ST", x: 30, y: 5 },
-            { position: "ST", x: 60, y: 5 }
+            { position: "GK", x: 40, y: 70 },
+            { position: "LB", x: 5, y: 45 },
+            { position: "CB", x: 30, y: 45 },
+            { position: "CB", x: 60, y: 45 },
+            { position: "RB", x: 85, y: 45 },
+            { position: "LM", x: 5, y: 20 },
+            { position: "CM", x: 30, y: 20 },
+            { position: "CM", x: 60, y: 20 },
+            { position: "RM", x: 80, y: 20 },
+            { position: "ST", x: 30, y: 0 },
+            { position: "ST", x: 60, y: 0 }
         ]
     },
     "4-3-3": {
         positions: [
-            { position: "GK", x: 45, y: 80 },
-            { position: "LB", x: 10, y: 60 },
-            { position: "CB", x: 35, y: 60 },
-            { position: "CB", x: 55, y: 60 },
-            { position: "RB", x: 80, y: 60 },
-            { position: "CM", x: 25, y: 30 },
-            { position: "CM", x: 45, y: 30 },
-            { position: "CM", x: 65, y: 30 },
-            { position: "LW", x: 10, y: 5 },
-            { position: "ST", x: 45, y: 5 },
-            { position: "RW", x: 80, y: 5 }
+            { position: "GK", x: 40, y: 70 },
+            { position: "LB", x: 5, y: 45 },
+            { position: "CB", x: 30, y: 45 },
+            { position: "CB", x: 60, y: 45 },
+            { position: "RB", x: 85, y: 45 },
+            { position: "CM", x: 25, y: 20 },
+            { position: "CM", x: 45, y: 20 },
+            { position: "CM", x: 65, y: 20 },
+            { position: "LW", x: 10, y: 0 },
+            { position: "ST", x: 45, y: 0 },
+            { position: "RW", x: 80, y: 0 }
         ]
     }
 };
@@ -793,8 +793,10 @@ function validatePlayerForm() {
         return false;
     }
 
-    if (!playerPosition) {
-        alert('Please select a position');
+    if (!playerPosition || (playerPosition !== 'GK' && playerPosition !== 'ST' 
+        && playerPosition !== 'LW' && playerPosition !== 'RW' && playerPosition !== 'CM' 
+        && playerPosition !== 'CDM' && playerPosition !== 'CAM' && playerPosition !== 'LM' && playerPosition !== 'RM')) {
+        alert('Please select a valid position');
         return false;
     }
 
@@ -860,10 +862,14 @@ let fieldPlayers = new Set(); // Track players placed in the field
 
 // Add function to place player in slot
 function placePlayerInSlot(player, slot) {
+    
+    if(slot.dataset.position != 'GK' && player.position == 'GK'){
+        alert("cannot place goalkeeper in this position");
+        return;
+    }
     const fieldCard = createPlayerCard(player, true);
     slot.innerHTML = '';
     slot.appendChild(fieldCard);
-    
     // Add player to field players set
     fieldPlayers.add(player.name);
     
@@ -922,7 +928,7 @@ document.addEventListener('DOMContentLoaded', () => {
     savePlayers();
     // Load players from localStorage on page load
     players = JSON.parse(localStorage.getItem('players')) || [];
-    updateFormation('4-4-2');
+    updateFormation('4-3-3');
     updatePlayerList();
     // Add form reset listener
     document.getElementById('player-form').addEventListener('reset', () => {
