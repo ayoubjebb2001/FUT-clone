@@ -690,6 +690,7 @@ function createPlayerCard(playerData, isFieldCard = false) {
     } else {
         // Only add selection functionality for player list cards
         card.addEventListener('click', () => {
+            console.log(playerData.name , playerData.rating);
             if (!fieldPlayers.has(playerData.name)) {
                 const previouslySelected = document.querySelector('.selected-player');
                 if (previouslySelected) {
@@ -725,7 +726,7 @@ function createSlot(position, x, y) {
                 </div>
             </div>
             <button class="cardbutton button-reset" aria-label="Card Button">
-                <img class="placeholder-img placeholder-enable-hover-shadow" src="/img/placeholder-card-normal.webp">
+                <img class="placeholder-img placeholder-enable-hover-shadow" src="img/placeholder-card-normal.webp">
                 <div class="player-add-icon-wrapper-modern">
                     <span class="display-contents">
                         <svg class="" viewBox="0 0 36 42" fill="none" width="36">
